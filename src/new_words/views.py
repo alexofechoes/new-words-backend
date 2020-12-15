@@ -12,7 +12,7 @@ class TextAdd(CreateView):
     fields = ['name', 'text']
 
 
-class WordsViewSet(viewsets.ReadOnlyModelViewSet):
+class WordsViewSet(viewsets.ModelViewSet):
     serializer_class = WordsSerializer
 
     def get_queryset(self):
