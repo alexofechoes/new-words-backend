@@ -4,7 +4,7 @@ from new_words.services import word_extractor_process
 
 
 class Command(BaseCommand):
-    help = 'processed texts'
+    help = 'process texts'
 
     def handle(self, *args, **options):
         try:

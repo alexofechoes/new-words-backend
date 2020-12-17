@@ -1,16 +1,19 @@
-.PHONY: server makemigrations migrate shell
-
-server:
-	poetry run python src/manage.py runserver
-
+.PHONY: makemigrations
 makemigrations:
-	poetry run src/manage.py makemigrations
+	docker-compose exec app  python src/manage.py makemigrations
 
+.PHONY: migrate
 migrate:
-	poetry run src/manage.py migrate
+	docker-compose exec app python src/manage.py migrate
 
+.PHONY: shell
 shell:
-	poetry run src/manage.py shell
+	docker-compose exec app python src/manage.py shell
 
-processed_texts:
-	poetry run ./src/process_worker.py
+.PHONY: createsuperuser
+createsuperuser:
+	docker-compose exec app python src/manage.py createsuperuser
+
+.PHONY: process_texts
+process_texts:
+	docker-compose exec app python src/manage.py process_texts

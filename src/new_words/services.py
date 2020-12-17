@@ -4,13 +4,11 @@ import string
 
 import nltk
 from django.db import transaction
-
 from nltk.stem import WordNetLemmatizer
 
 from new_words import models
 
 lemmatizer = WordNetLemmatizer()
-nltk.download('wordnet')
 
 STOP_WORDS = ["the", "'s", "'ll", "n't", "'re", "..."]
 
