@@ -50,3 +50,6 @@ coverage.xml
 
 # pytest:
 .pytest_cache/
+
+# poetry
+.venv/
