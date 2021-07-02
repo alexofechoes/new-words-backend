@@ -1,6 +1,7 @@
 from django.contrib.auth.models import User
 from django.db import models
-from django_fsm import FSMField, transition
+
+from django_fsm import FSMField, transition  # type: ignore
 
 
 class Text(models.Model):

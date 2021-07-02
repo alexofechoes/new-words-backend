@@ -1,10 +1,11 @@
+import string
 from collections import Counter
 from typing import List, Tuple
-import string
 
-import nltk
 from django.db import transaction
-from nltk.stem import WordNetLemmatizer
+
+import nltk  # type: ignore
+from nltk.stem import WordNetLemmatizer  # type: ignore
 
 from new_words import models
 

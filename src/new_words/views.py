@@ -1,9 +1,10 @@
 from django.contrib.auth.models import User
 from django.http import JsonResponse
 from django.views.generic.edit import CreateView
-from new_words.models import Text, Word
 
 from rest_framework import viewsets
+
+from new_words.models import Text, Word
 from new_words.serializers import WordsSerializer
 
 

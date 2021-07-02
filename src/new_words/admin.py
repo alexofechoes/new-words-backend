@@ -1,4 +1,5 @@
 from django.contrib import admin
+
 from new_words import models
 
 
