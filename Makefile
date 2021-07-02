@@ -2,8 +2,8 @@
 makemigrations:
 	docker-compose exec app python src/manage.py makemigrations
 
-.PHONY: migrate
-migrate:
+.PHONY: migrate-with-docker
+migrate-with-docker:
 	docker-compose exec app python src/manage.py migrate
 
 .PHONY: shell
@@ -17,6 +17,10 @@ createsuperuser:
 .PHONY: process_texts
 process_texts:
 	docker-compose exec app python src/manage.py process_texts
+
+.PHONY: migrate
+migrate:
+	poetry run python src/manage.py migrate
 
 .PHONY: install
 install:
