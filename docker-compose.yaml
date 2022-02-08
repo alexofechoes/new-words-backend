@@ -12,7 +12,7 @@ services:
     depends_on:
       - db
       - migrate
-  
+
   db:
     image: postgres:10.8
     env_file:
